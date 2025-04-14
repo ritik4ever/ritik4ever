@@ -1,7 +1,4 @@
-github: [octocat, surftocat]
-patreon: octocat
-tidelift: npm/octo-package
-custom: ["<iframe src="https://github.com/sponsors/ritik4ever/button" title="Sponsor ritik4ever" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>"]
+
 
 
 
