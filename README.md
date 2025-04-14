@@ -1,3 +1,10 @@
+github: [octocat, surftocat]
+patreon: octocat
+tidelift: npm/octo-package
+custom: ["<iframe src="https://github.com/sponsors/ritik4ever/button" title="Sponsor ritik4ever" height="32" width="114" style="border: 0; border-radius: 6px;"></iframe>"]
+
+
+
 <h1 align="center">Hi there, I'm Ritik Patel</h1>
 <h3 align="center">A passionate Web2 and Web3 Devloper</h3>
 
@@ -21,3 +28,4 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ritik4ever&show_icons=true&locale=en" alt="ritik4ever" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ritik4ever&" alt="ritik4ever" /></p>
+
