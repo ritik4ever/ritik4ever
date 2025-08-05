@@ -1,673 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ritik Patel - GitHub Profile</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: #e4e4e7;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Animated Header */
-        .header {
-            text-align: center;
-            padding: 4rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.1), transparent);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { left: -100%; }
-            100% { left: 100%; }
-        }
-
-        .hero-title {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
-            background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.3)); }
-            to { filter: drop-shadow(0 0 30px rgba(167, 139, 250, 0.5)); }
-        }
-
-        .subtitle {
-            font-size: 1.5rem;
-            color: #a1a1aa;
-            margin-bottom: 2rem;
-            font-weight: 300;
-        }
-
-        .highlight {
-            color: #60a5fa;
-            font-weight: 600;
-        }
-
-        /* Stats Cards */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 4rem 0;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .stat-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
-        }
-
-        .stat-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(96, 165, 250, 0.2);
-            border-color: rgba(96, 165, 250, 0.3);
-        }
-
-        .stat-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #60a5fa;
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .stat-label {
-            color: #a1a1aa;
-            font-size: 1.1rem;
-            margin-top: 0.5rem;
-        }
-
-        /* Tech Stack */
-        .section {
-            margin: 5rem 0;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 3rem;
-            background: linear-gradient(135deg, #60a5fa, #a78bfa);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .tech-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-
-        .tech-item:hover {
-            transform: scale(1.05);
-            background: rgba(96, 165, 250, 0.1);
-            border-color: rgba(96, 165, 250, 0.3);
-        }
-
-        .tech-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #60a5fa, #a78bfa);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-            font-weight: 600;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .project-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #10b981, #06b6d4, #8b5cf6);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .project-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: #60a5fa;
-        }
-
-        .project-description {
-            color: #a1a1aa;
-            margin-bottom: 1.5rem;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tag {
-            background: rgba(96, 165, 250, 0.2);
-            color: #60a5fa;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            background: linear-gradient(135deg, #60a5fa, #a78bfa);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(96, 165, 250, 0.3);
-        }
-
-        /* Experience */
-        .experience-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 2rem 0;
-            backdrop-filter: blur(10px);
-            position: relative;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(180deg, #60a5fa, #a78bfa);
-            border-radius: 0 4px 4px 0;
-        }
-
-        .experience-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #60a5fa;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-company {
-            font-size: 1.2rem;
-            color: #f472b6;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-date {
-            color: #a1a1aa;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-
-        .contact-item {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 1.5rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            background: rgba(96, 165, 250, 0.1);
-            border-color: rgba(96, 165, 250, 0.3);
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #60a5fa;
-        }
-
-        .contact-link {
-            color: #e4e4e7;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-link:hover {
-            color: #60a5fa;
-        }
-
-        /* GitHub Stats */
-        .github-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .github-stat {
-            text-align: center;
-        }
-
-        .github-stat img {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .hero-title {
-                font-size: 3rem;
-            }
-            
-            .container {
-                padding: 1rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fadeInUp {
-            animation: fadeInUp 0.6s ease-out;
-        }
-
-        /* Floating elements */
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1 class="hero-title">RITIK PATEL</h1>
-            <p class="subtitle">
-                🚀 <span class="highlight">Full-Stack Developer</span> | 
-                ⛓️ <span class="highlight">Web3 Engineer</span> | 
-                🏆 <span class="highlight">Hackathon Winner</span>
-            </p>
-            <p style="font-size: 1.2rem; color: #a1a1aa; max-width: 600px; margin: 0 auto;">
-                Building the decentralized future with cutting-edge blockchain solutions and scalable web applications
-            </p>
-        </div>
-
-        <!-- Stats -->
-        <div class="stats-grid">
-            <div class="stat-card floating">
-                <span class="stat-icon">🏆</span>
-                <div class="stat-number">TOP 25</div>
-                <div class="stat-label">HackHazard 2025<br>(15,000+ participants)</div>
-            </div>
-            <div class="stat-card floating" style="animation-delay: 0.2s;">
-                <span class="stat-icon">💼</span>
-                <div class="stat-number">SDE</div>
-                <div class="stat-label">Intern at Razorpay<br>Fintech Experience</div>
-            </div>
-            <div class="stat-card floating" style="animation-delay: 0.4s;">
-                <span class="stat-icon">📊</span>
-                <div class="stat-number">8.4</div>
-                <div class="stat-label">GPA at PEC<br>Computer Science</div>
-            </div>
-            <div class="stat-card floating" style="animation-delay: 0.6s;">
-                <span class="stat-icon">🌟</span>
-                <div class="stat-number">15+</div>
-                <div class="stat-label">Full-Stack Projects<br>Client Deliveries</div>
-            </div>
-        </div>
-
-        <!-- Tech Stack -->
-        <div class="section">
-            <h2 class="section-title">🛠️ Tech Arsenal</h2>
-            <div class="tech-grid">
-                <div class="tech-item">
-                    <div class="tech-icon">TS</div>
-                    <div>TypeScript</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">⚛️</div>
-                    <div>React/Next.js</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">🟢</div>
-                    <div>Node.js</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">⛓️</div>
-                    <div>Solidity</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">🦀</div>
-                    <div>Rust</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">🐘</div>
-                    <div>PostgreSQL</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">🍃</div>
-                    <div>MongoDB</div>
-                </div>
-                <div class="tech-item">
-                    <div class="tech-icon">☁️</div>
-                    <div>AWS</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Featured Projects -->
-        <div class="section">
-            <h2 class="section-title">🚀 Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">🔒 Smart Contract Vulnerability Detector</h3>
-                    <p class="project-description">
-                        Advanced security tool that scans smart contract source code for known vulnerabilities, 
-                        detects exploitable patterns, and provides early warnings before deployment.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Solidity</span>
-                        <span class="tag">Security</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🌐 Live Demo</a>
-                        <a href="#" class="project-link">📂 GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">✈️ Crypto-Travel Platform</h3>
-                    <p class="project-description">
-                        Decentralized travel booking platform enabling crypto payments, NFT-based rewards, 
-                        blockchain identity verification, and tokenized travel experiences.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">Solidity</span>
-                        <span class="tag">Web3</span>
-                        <span class="tag">NFTs</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🌐 Live Demo</a>
-                        <a href="#" class="project-link">📂 GitHub</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3 class="project-title">⛏️ Crypto Mining Game (HackHazard Winner)</h3>
-                    <p class="project-description">
-                        Award-winning blockchain game built on Monad network that secured Top 25 position 
-                        among 15,000+ participants at HackHazard 2025.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Monad</span>
-                        <span class="tag">GameFi</span>
-                        <span class="tag">Blockchain</span>
-                        <span class="tag">Award Winner</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">🎮 Play Game</a>
-                        <a href="#" class="project-link">📂 GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Experience -->
-        <div class="section">
-            <h2 class="section-title">💼 Experience</h2>
-            
-            <div class="experience-item">
-                <h3 class="experience-title">Software Development Engineer Intern</h3>
-                <div class="experience-company">🏦 Razorpay</div>
-                <div class="experience-date">Oct 2024 - Dec 2024</div>
-                <p>Developed and maintained backend services using TypeScript and PostgreSQL, contributing to robust fintech solutions. Collaborated with cross-functional teams to deliver impactful features and enhanced system performance in a fast-paced environment.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3 class="experience-title">Full-Stack Developer (Freelance)</h3>
-                <div class="experience-company">🌐 Various Clients</div>
-                <div class="experience-date">Ongoing</div>
-                <p>Delivered 15+ end-to-end projects using MERN stack, Next.js, and crypto integrations. Built scalable web applications with focus on performance, security, and modern UI/UX principles.</p>
-            </div>
-
-            <div class="experience-item">
-                <h3 class="experience-title">Open Source Contributor</h3>
-                <div class="experience-company">🔗 Web3 Ecosystem</div>
-                <div class="experience-date">Ongoing</div>
-                <p>Active contributor to OnlyDust, StarkNet, StarkCairo, and Nethermind projects. Focused on smart contract development, zero-knowledge proofs, and developer tooling.</p>
-            </div>
-        </div>
-
-        <!-- GitHub Stats -->
-        <div class="section">
-            <h2 class="section-title">📊 GitHub Analytics</h2>
-            <div class="github-stats">
-                <div class="github-stat">
-                    <img src="https://github-readme-stats.vercel.app/api?username=ritik4ever&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="GitHub Stats">
-                </div>
-                <div class="github-stat">
-                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=ritik4ever&theme=tokyonight&hide_border=true&background=0d1117" alt="GitHub Streak">
-                </div>
-                <div class="github-stat">
-                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ritik4ever&layout=compact&theme=tokyonight&hide_border=true&bg_color=0d1117" alt="Top Languages">
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact -->
-        <div class="section">
-            <h2 class="section-title">📬 Let's Connect</h2>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">📧</div>
-                    <a href="mailto:ritikverma0050@gmail.com" class="contact-link">
-                        ritikverma0050@gmail.com
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">📱</div>
-                    <a href="tel:+918887555059" class="contact-link">
-                        +91-8887555059
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">💼</div>
-                    <a href="https://www.linkedin.com/in/ritik-patel-3b15b2327/" class="contact-link">
-                        LinkedIn Profile
-                    </a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">🐙</div>
-                    <a href="https://github.com/ritik4ever" class="contact-link">
-                        GitHub Profile
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div style="text-align: center; margin: 4rem 0 2rem; padding: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-            <p style="color: #a1a1aa; font-size: 1.1rem;">
-                🌟 <strong>Always building, always learning, always innovating</strong> 🌟
-            </p>
-            <p style="color: #71717a; font-size: 0.9rem; margin-top: 1rem;">
-                "Code is poetry written in logic" - Let's create something amazing together!
-            </p>
-        </div>
-    </div>
-
-    <script>
-        // Add scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fadeInUp');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('.section, .stat-card, .project-card, .experience-item').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add typing effect to subtitle
-        const subtitle = document.querySelector('.subtitle');
-        const text = subtitle.innerHTML;
-        subtitle.innerHTML = '';
-        let i = 0;
-
-        function typeWriter() {
-            if (i < text.length) {
-                subtitle.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 50);
-            }
-        }
-
-        setTimeout(typeWriter, 1000);
-    </script>
-</body>
-</html>
+# Hi there! 👋 I'm Ritik Patel
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ritik-patel-3b15b2327/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ritik4ever)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ritikverma0050@gmail.com)
+[![Phone](https://img.shields.io/badge/Phone-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](tel:+918887555059)
+
+## 🚀 About Me
+
+I'm a passionate **Full Stack Developer** and **Web3 Engineer** currently pursuing my Bachelor's in Computer Science Engineering from **Punjab Engineering College**. I specialize in building scalable web applications and innovative blockchain solutions that bridge traditional finance with decentralized technologies.
+
+- 🔭 Recently completed **SDE Internship at Razorpay** - Contributing to robust fintech solutions
+- 🌱 Active contributor to **StarkNet, OnlyDust, Nethermind** open-source projects  
+- 🏆 **Top 25** at HackHazard 2025 among **15,000+ participants** - Built crypto mining game on Monad
+- 💡 Specialized in **Smart Contracts, DeFi,** and **Zero-Knowledge Proofs**
+- 🎯 **8.4/10 GPA** with strong foundation in algorithms and system design
+- 💻 Built **15+ end-to-end projects** with modern tech stacks and crypto integrations
+- 🌍 Participated in **ETHIndia** and **Devfolio** hackathons for Web3 innovation
+
+## 💻 Tech Stack
+
+### Languages
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+
+### Frontend Development
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+### Backend Development
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
+![WebSockets](https://img.shields.io/badge/WebSockets-010101?style=for-the-badge&logo=socket.io&logoColor=white)
+
+### Blockchain & Web3
+![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=ethereum&logoColor=white)
+![Web3.js](https://img.shields.io/badge/Web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
+![MetaMask](https://img.shields.io/badge/MetaMask-F6851B?style=for-the-badge&logo=metamask&logoColor=white)
+![Hardhat](https://img.shields.io/badge/Hardhat-FFF100?style=for-the-badge&logo=hardhat&logoColor=black)
+
+### Databases & Tools
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white)
+
+### Cloud & DevOps
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+
+## 🌟 Featured Projects
+
+### 🔐 Smart Contract Vulnerability Detector
+**Tech Stack:** Python, Next.js, Solidity, Vercel, GitHub
+
+Advanced security scanner for smart contracts with real-time vulnerability detection and comprehensive security analysis.
+
+✅ **Real-time smart contract scanning** for known vulnerabilities  
+✅ **Pattern recognition engine** for exploitable code detection  
+✅ **Pre-deployment security warnings** with severity levels  
+✅ **Comprehensive security reports** with remediation suggestions  
+✅ **Multi-blockchain support** for various smart contract platforms
+
+[🔗 Live Demo](#) | [📱 GitHub Repository](#)
+
+### ✈️ Crypto-Travel - Decentralized Travel Ecosystem
+**Tech Stack:** Next.js, JavaScript, React, MetaMask, Solidity, Vercel
+
+Revolutionary travel platform enabling cryptocurrency payments and blockchain-powered travel experiences.
+
+✅ **Decentralized travel booking** with crypto payment integration  
+✅ **NFT-based loyalty rewards** and digital travel passes  
+✅ **Decentralized Identity (DID)** for secure traveler verification  
+✅ **On-chain travel reviews** with tamper-proof authenticity  
+✅ **Tokenized travel experiences** for trading and redemption
+
+[🔗 Live Demo](#) | [📱 GitHub Repository](#)
+
+### ⛏️ Crypto Mining Game - HackHazard 2025 Winner
+**Tech Stack:** Solidity, JavaScript, Monad Blockchain, Web3.js
+
+Top 25 winning project at HackHazard 2025 - An innovative blockchain-based mining simulation game.
+
+✅ **Monad blockchain integration** for high-performance gaming  
+✅ **Gas-optimized smart contracts** for seamless gameplay  
+✅ **Real-time mining mechanics** with tokenized rewards  
+✅ **Player progression system** with NFT achievements  
+✅ **Multi-player competitive features** and leaderboards
+
+[🔗 Play Game](#) | [📱 GitHub Repository](#)
+
+### 🚀 MERN Stack Web Applications
+**Tech Stack:** MongoDB, Express.js, React, Node.js, Various APIs
+
+Collection of 15+ full-stack applications demonstrating scalable architecture and modern development practices.
+
+✅ **End-to-end project development** with complete CRUD operations  
+✅ **Client-side crypto integrations** for Web3 functionality  
+✅ **Responsive UI/UX design** with modern design principles  
+✅ **Optimal performance optimization** and security implementations  
+✅ **Scalable architecture patterns** for enterprise-level applications
+
+## 💼 Experience
+
+### 🏢 Razorpay - Software Development Engineer Intern
+**October 2024 – December 2024**
+
+Contributed to India's leading fintech platform, developing robust backend services and enhancing system performance.
+
+✅ Developed and maintained **backend services** using TypeScript and PostgreSQL  
+✅ Collaborated with **cross-functional teams** to deliver impactful features  
+✅ Enhanced **system performance** and scalability in production environment  
+✅ Gained hands-on experience in **fast-paced fintech** development cycles  
+✅ Contributed to **robust fintech solutions** serving millions of users
+
+### 💻 Freelance Full-Stack Developer
+**2023 – Present**
+
+Delivering high-quality web applications and blockchain solutions for diverse clients worldwide.
+
+✅ Built **15+ end-to-end projects** using MERN stack and Next.js  
+✅ Specialized in **Web3 project development** with blockchain integrations  
+✅ Implemented **client-side crypto integrations** for decentralized features  
+✅ Designed **responsive user interfaces** with modern UI/UX principles  
+✅ Ensured **optimal performance and security** across all deployments
+
+### 🌟 Open Source Contributor
+**2023 – Present**
+
+Active contributor to major Web3 and blockchain projects, focusing on developer tooling and infrastructure.
+
+✅ Contributing to **OnlyDust, StarkNet, StarkCairo, Nethermind** ecosystems  
+✅ Developing **smart contract solutions** and zero-knowledge proof implementations  
+✅ Building **developer tooling** for improved Web3 development experience  
+✅ Collaborating with **global developer communities** on protocol improvements
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+![Ritik's GitHub stats](https://github-readme-stats.vercel.app/api?username=ritik4ever&show_icons=true&theme=radical&hide_border=true&count_private=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ritik4ever&layout=compact&theme=radical&hide_border=true)
+
+![GitHub Streak](https://streak-stats.demolab.com/?user=ritik4ever&theme=radical&hide_border=true)
+
+</div>
+
+## 🏆 Achievements & Certifications
+
+🥇 **Top 25** at HackHazard 2025 among **15,000+ participants** - Monad Track Winner  
+🚀 **ETHIndia & Devfolio** hackathon participant - Web3 innovation focus  
+🎓 **8.4/10 GPA** at Punjab Engineering College - Computer Science Engineering  
+💼 **15+ successful freelance projects** with 100% client satisfaction  
+🌟 **Active open-source contributor** to major Web3 protocols  
+🔧 **Smart contract development** expertise with security-first approach  
+📚 **Full-Stack Development** with modern tech stack proficiency  
+⚡ **Real-time web applications** with WebSocket implementations
+
+## 📈 Activity Graph
+
+[![Ritik's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ritik4ever&theme=redical)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+## 🤝 Let's Connect!
+
+I'm always excited to collaborate on innovative Web3 projects, contribute to open-source initiatives, or discuss the latest in blockchain and fintech technology! Whether you're looking for a developer, contributor, or technical collaborator, I'd love to connect.
+
+💼 **Open to Full-time opportunities** in Web3, fintech, and full-stack development  
+🌍 **Contributing to Open Source** projects in blockchain and DeFi ecosystems  
+💡 **Interested in** Smart Contracts, Zero-Knowledge Proofs, and DeFi innovations  
+📚 **Constantly learning** cutting-edge technologies and development practices  
+🎯 **Available for freelance** projects and technical consulting  
+
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/ritik-patel-3b15b2327/)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail)](mailto:ritikverma0050@gmail.com)
+[![Phone](https://img.shields.io/badge/Phone-Call-25D366?style=for-the-badge&logo=phone)](tel:+918887555059)
+
+---
+
+*"Building the decentralized future, one smart contract at a time."* 🚀
+
+⭐️ From [Ritik Patel](https://github.com/ritik4ever)
+
+</div>
