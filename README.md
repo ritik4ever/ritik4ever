@@ -1,28 +1,74 @@
+<h1 align="center">Hey 👋, I'm Ritik Patel</h1>
 
-
-
-
-<h1 align="center">Hi there, I'm Ritik Patel</h1>
-<h3 align="center">A passionate Web2 and Web3 Devloper</h3>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=ritik4ever&label=Profile%20views&color=0e75b6&style=flat" alt="ritik4ever" /> </p>
-
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=ritik4ever" alt="ritik4ever" /></a> </p>
-
-<p align="left"> <a href="https://twitter.com/" target="blank"><img src="https://img.shields.io/twitter/follow/?logo=twitter&style=for-the-badge" alt="" /></a> </p>
-
-- 📫 How to reach me **ritikzoom4ever@gmail.com**
-
-<h3 align="left">Connect with me:</h3>
-<p align="left">
+<p align="center">
+  🚀 Full Stack & Web3 Developer • 💡 Smart Contract Auditor • 🛠️ Open Source Contributor <br/>
+  <a href="https://www.linkedin.com/in/ritik-patel-3b15b2327/"><img src="https://img.shields.io/badge/LinkedIn-Ritik%20Patel-blue?logo=linkedin"></a>
+  <a href="https://github.com/ritik4ever"><img src="https://img.shields.io/badge/GitHub-ritik4ever-black?logo=github"></a>
+  <a href="mailto:ritikverma0050@gmail.com"><img src="https://img.shields.io/badge/Email-ritikverma0050@gmail.com-red?logo=gmail"></a>
 </p>
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> <a href="https://angular.io" target="_blank" rel="noreferrer"> <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="angular" width="40" height="40"/> </a> <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> </a> <a href="https://www.chartjs.org" target="_blank" rel="noreferrer"> <img src="https://www.chartjs.org/media/logo-title.svg" alt="chartjs" width="40" height="40"/> </a> <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg" alt="cplusplus" width="40" height="40"/> </a> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.djangoproject.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" width="40" height="40"/> </a> <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40" height="40"/> </a> <a href="https://expressjs.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg" alt="express" width="40" height="40"/> </a> <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="40" height="40"/> </a> <a href="https://flask.palletsprojects.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="flask" width="40" height="40"/> </a> <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40" height="40"/> </a> <a href="https://golang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg" alt="go" width="40" height="40"/> </a> <a href="https://graphql.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/graphql/graphql-icon.svg" alt="graphql" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> <a href="https://www.linux.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/> </a> <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> </a> <a href="https://www.mongodb.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40"/> </a> <a href="https://www.mysql.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/> </a> <a href="https://nestjs.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nestjs/nestjs-plain.svg" alt="nestjs" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.postgresql.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://pytorch.org/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="pytorch" width="40" height="40"/> </a> <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/> </a> <a href="https://www.rust-lang.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg" alt="rust" width="40" height="40"/> </a> <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> <a href="https://webpack.js.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/d00d0969292a6569d45b06d3f350f463a0107b0d/icons/webpack/webpack-original-wordmark.svg" alt="webpack" width="40" height="40"/> </a> </p>
+---
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=ritik4ever&show_icons=true&locale=en&layout=compact" alt="ritik4ever" /></p>
+### 🧠 About Me
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=ritik4ever&show_icons=true&locale=en" alt="ritik4ever" /></p>
+- 🔭 Interned at **Razorpay** as an SDE (TypeScript, PostgreSQL)
+- 🛠️ Built 15+ full-stack apps (MERN, Next.js, Solidity)
+- 🌐 Open source contributor at **StarkNet**, **OnlyDust**, **Nethermind**, **StarkCairo**
+- 🎯 Passionate about Web3, ZK Proofs, Smart Contract Security & Real-time Systems
+- 🏆 **Top 25 at HackHazard 2025** out of 15,000+ participants (Monad Track)
+- 🧳 Built **Crypto-Travel**, a decentralized travel ecosystem
+- 🤝 Available for freelance / collaboration / auditing gigs
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ritik4ever&" alt="ritik4ever" /></p>
+---
 
+### 🔨 Tech Stack
+
+#### Languages & Frameworks
+`TypeScript` | `JavaScript` | `Solidity` | `Rust` | `Go` | `Java`  
+`Next.js` | `React.js` | `Node.js` | `Express.js` | `WebSockets`  
+
+#### Web3 & Dev Tools
+`Ethers.js` | `Web3.js` | `Hardhat` | `Foundry` | `Starknet.js` | `MetaMask`  
+`Docker` | `Kubernetes` | `AWS` | `PostgreSQL` | `MongoDB` | `Redis`
+
+#### Concepts
+`Smart Contracts` | `Full Stack DApps` | `Real-time Systems` | `API Dev`  
+`Authentication` | `Cloud Deployment` | `DevOps` | `ZK Proofs` | `Security Audits`
+
+---
+
+### 💻 Featured Projects
+
+#### 🔐 [Smart Contract Vulnerability Detector](https://smart-contract-vulnerability-detector-2vki.vercel.app/)
+> Built with Python, Solidity, Next.js  
+> 🛡️ Detects common security risks in Solidity smart contracts before deployment
+
+🔗 [Live Site](https://smart-contract-vulnerability-detector-2vki.vercel.app/) | [GitHub Repo](https://github.com/ritik4ever/Smart-Contract-Vulnerability-Detector)
+
+---
+
+#### ✈️ [Crypto-Travel DApp](https://crypto-travel-tau.vercel.app/)
+> Decentralized Travel Booking | NFT-Based Loyalty | On-Chain Reviews
+
+🔗 [Live Site](https://crypto-travel-tau.vercel.app/) | [GitHub Repo](https://github.com/ritik4ever/crypto-travel)
+
+---
+
+### 🚀 Hackathons & Open Source
+
+- 🏁 Participated in **ETHIndia**, **Devfolio** hackathons
+- 💥 Won **Top 25** at **HackHazard 2025**
+- 💻 Contributed to:
+  - StarkNet & Cairo ecosystem
+  - Nethermind infrastructure
+  - ZK tooling on OnlyDust
+
+---
+
+### 📫 Reach Me
+
+```yaml
+Email:   ritikverma0050@gmail.com
+Phone:   +91-8887555059
+GitHub:  https://github.com/ritik4ever
+LinkedIn: https://linkedin.com/in/ritik-patel-3b15b2327
