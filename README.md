@@ -16,7 +16,6 @@
 
 🏆 **Recent Achievements:**
 - 🥇 **Top 25** at HackHazard 2025 among **15,000+ global participants**
-- 💼 **SDE Intern at Razorpay** - Contributing to India's leading fintech platform
 - 🌟 **Active contributor** to major Web3 protocols: StarkNet, OnlyDust, Nethermind
 - 🚀 **15+ production applications** deployed with 100% client satisfaction
 
